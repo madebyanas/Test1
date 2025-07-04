@@ -466,81 +466,46 @@ function updatePercentageCircle(competency, percentage) {
 }
 
 async function sendDataToGoogleSheets(name, phone, scores) {
-    const loadingIndicator = document.getElementById('loading-indicator');
-    if (loadingIndicator) loadingIndicator.style.display = 'flex';
+  const loadingIndicator = document.getElementById('loading-indicator');
+  if (loadingIndicator) loadingIndicator.style.display = 'flex';
 
-    console.log('Connexion au script : test de connexion désactivé');
+  const data = {
+    name,
+    phone,
+    overallLevel: scores.overallLevel,
+    grammarPercentage: scores.competencies.grammar,
+    vocabularyPercentage: scores.competencies.vocabulary,
+    readingPercentage: scores.competencies.reading,
+    selectedLanguage,
+    timestamp: new Date().toISOString()
+  };
 
-    const data = {
-        name: name,
-        phone: phone,
-        overallLevel: scores.overallLevel,
-        grammarPercentage: scores.competencies.grammar,
-        vocabularyPercentage: scores.competencies.vocabulary,
-        readingPercentage: scores.competencies.reading,
-        selectedLanguage: selectedLanguage,
-        timestamp: new Date().toISOString()
-    };
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxlbjVe8MIm2Lapukw0mSaB--d45iqCZiagw96WhVo3QJpY7yYpslymcnWmidaSs3TxWA/exec';
 
-    // 🟢 METS TON URL ICI ⬇️
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxlbjVe8MIm2Lapukw0mSaB--d45iqCZiagw96WhVo3QJpY7yYpslymcnWmidaSs3TxWA/exec';
-
-    return new Promise((resolve) => {
-        try {
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = scriptURL;
-            form.target = 'hidden-iframe';
-            form.style.display = 'none';
-
-            let iframe = document.getElementById('hidden-iframe');
-            if (!iframe) {
-                iframe = document.createElement('iframe');
-                iframe.name = 'hidden-iframe';
-                iframe.id = 'hidden-iframe';
-                iframe.style.display = 'none';
-                document.body.appendChild(iframe);
-            }
-
-            const dataInput = document.createElement('input');
-            dataInput.type = 'hidden';
-            dataInput.name = 'data';
-            dataInput.value = JSON.stringify(data);
-            form.appendChild(dataInput);
-
-            document.body.appendChild(form);
-
-            const timeoutId = setTimeout(() => {
-                if (loadingIndicator) loadingIndicator.style.display = 'none';
-                showNotification('L\'envoi des données a pris trop de temps. Veuillez réessayer.', 'error');
-                resolve(false);
-            }, 15000);
-
-            iframe.onload = function () {
-                clearTimeout(timeoutId);
-                if (form.parentNode) form.parentNode.removeChild(form);
-                if (loadingIndicator) loadingIndicator.style.display = 'none';
-                showNotification('Vos résultats ont été enregistrés avec succès !', 'success');
-                resolve(true);
-            };
-
-            iframe.onerror = function () {
-                clearTimeout(timeoutId);
-                if (form.parentNode) form.parentNode.removeChild(form);
-                if (loadingIndicator) loadingIndicator.style.display = 'none';
-                showNotification('Erreur lors de l\'envoi des données.', 'error');
-                resolve(false);
-            };
-
-            form.submit();
-            console.log('Formulaire soumis');
-        } catch (error) {
-            if (loadingIndicator) loadingIndicator.style.display = 'none';
-            showNotification('Une erreur est survenue.', 'error');
-            resolve(false);
-        }
+  try {
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
     });
+
+    const result = await response.json();
+    console.log("Réponse reçue :", result);
+
+    if (loadingIndicator) loadingIndicator.style.display = 'none';
+    showNotification(result.message || 'Succès', 'success');
+    return true;
+
+  } catch (error) {
+    console.error("Erreur lors de l'envoi :", error);
+    if (loadingIndicator) loadingIndicator.style.display = 'none';
+    showNotification("Erreur lors de l'envoi des données.", 'error');
+    return false;
+  }
 }
+
 
 
 function updateUILanguage(lang) {
