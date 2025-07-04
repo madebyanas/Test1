@@ -497,7 +497,7 @@ async function sendDataToGoogleSheets(name, phone, scores) {
     };
     
     // URL de votre script Google Apps Script déployé en tant qu'application web
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxPiSPIoWWrYytyVnkmSmliunawSHxJTV5lViAPmz4xkdYYloRcPBjLJG5I9Q4pQRG3qA/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw1VH0MYt6GmrOWqVq-NtgalOhtYb-0DRdO2LO3t8ttaPdg9_NBKkICR1IGglTLjgwKjA/exec';
     
     // Utiliser une approche alternative pour envoyer les données
     // Créer un formulaire invisible et le soumettre
