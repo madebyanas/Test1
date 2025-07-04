@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "¿Cuál de estas palabras es una preposición?",
+      "options": ["Manzana", "Rápido", "Bajo", "Verde"],
+      "answer": "Bajo"
+    },
+    {
+      "id": 2,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "¿Qué frase utiliza la forma verbal correcta?",
+      "options": ["Ella van al trabajo todos los días.", "Ella va al trabajo todos los días.", "Ella vamos al trabajo todos los días.", "Ella vais al trabajo todos los días."],
+      "answer": "Ella va al trabajo todos los días."
+    },
+    {
+      "id": 3,
+      "level": "A1",
+      "competency": "reading",
+      "question": "Lee la frase: 'Mi hermano trabaja en un banco.' ¿Qué hace él?",
+      "options": ["Estudia.", "Trabaja en un hospital.", "Trabaja en un banco.", "Viaja mucho."],
+      "answer": "Trabaja en un banco."
+    },
+    {
+      "id": 4,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "¿Qué palabra está relacionada con el tiempo?",
+      "options": ["Rápidamente", "Mesa", "Ayer", "Ventana"],
+      "answer": "Ayer"
+    },
+    {
+      "id": 5,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "Elige la forma negativa correcta: 'Él ___ le gusta el té.'",
+      "options": ["no", "ni", "nunca", "tampoco"],
+      "answer": "no"
+    },
+    {
+      "id": 6,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Elige el pretérito indefinido correcto: 'Ella ___ una carta ayer.'",
+      "options": ["escribe", "escribió", "escribía", "ha escrito"],
+      "answer": "escribió"
+    },
+    {
+      "id": 7,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "¿Cuál es el sinónimo de 'contento'?",
+      "options": ["Triste", "Cansado", "Feliz", "Enfadado"],
+      "answer": "Feliz"
+    },
+    {
+      "id": 8,
+      "level": "A2",
+      "competency": "reading",
+      "question": "Lee el texto: 'María le gustan las manzanas pero prefiere las naranjas.' ¿Qué prefiere María?",
+      "options": ["Las manzanas", "Las naranjas", "Ambas por igual", "Ni una ni otra"],
+      "answer": "Las naranjas"
+    },
+    {
+      "id": 9,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Completa: 'Si tuviera dinero, ___ de vacaciones.'",
+      "options": ["voy", "iba", "iría", "iré"],
+      "answer": "iría"
+    },
+    {
+      "id": 10,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "¿Qué palabra no pertenece al campo léxico de la comida?",
+      "options": ["Pan", "Queso", "Plato", "Zanahoria"],
+      "answer": "Plato"
+    }
+  ]
+}

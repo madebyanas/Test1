@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "Lequel de ces mots est une préposition ?",
+      "options": ["Pomme", "Rapide", "Sous", "Vert"],
+      "answer": "Sous"
+    },
+    {
+      "id": 2,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "Quelle phrase utilise la forme verbale correcte ?",
+      "options": ["Elle va au travail tous les jours.", "Elle allons au travail tous les jours.", "Elle vont au travail tous les jours.", "Elle allez au travail tous les jours."],
+      "answer": "Elle va au travail tous les jours."
+    },
+    {
+      "id": 3,
+      "level": "A1",
+      "competency": "reading",
+      "question": "Lisez la phrase : 'Mon frère travaille dans une banque.' Que fait-il ?",
+      "options": ["Il étudie.", "Il travaille dans un hôpital.", "Il travaille dans une banque.", "Il voyage beaucoup."],
+      "answer": "Il travaille dans une banque."
+    },
+    {
+      "id": 4,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "Quel mot est lié au temps ?",
+      "options": ["Rapidement", "Table", "Hier", "Fenêtre"],
+      "answer": "Hier"
+    },
+    {
+      "id": 5,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "Choisissez la forme négative correcte : 'Il ___ aime pas le thé.'",
+      "options": ["ne", "n'", "pas", "n'...pas"],
+      "answer": "n'...pas"
+    },
+    {
+      "id": 6,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Choisissez le passé composé correct : 'Elle ___ une lettre hier.'",
+      "options": ["écrit", "a écrit", "écrivait", "avait écrit"],
+      "answer": "a écrit"
+    },
+    {
+      "id": 7,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "Quel est le synonyme de 'content' ?",
+      "options": ["Triste", "Fatigué", "Heureux", "Fâché"],
+      "answer": "Heureux"
+    },
+    {
+      "id": 8,
+      "level": "A2",
+      "competency": "reading",
+      "question": "Lisez le texte : 'Marie aime les pommes mais elle préfère les oranges.' Qu'est-ce que Marie préfère ?",
+      "options": ["Les pommes", "Les oranges", "Les deux également", "Ni l'un ni l'autre"],
+      "answer": "Les oranges"
+    },
+    {
+      "id": 9,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Complétez : 'Si j'avais de l'argent, je ___ en vacances.'",
+      "options": ["vais", "allais", "irais", "irai"],
+      "answer": "irais"
+    },
+    {
+      "id": 10,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "Quel mot n'appartient pas au champ lexical de la nourriture ?",
+      "options": ["Pain", "Fromage", "Assiette", "Carotte"],
+      "answer": "Assiette"
+    }
+  ]
+}

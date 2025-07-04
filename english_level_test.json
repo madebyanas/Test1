@@ -1,0 +1,249 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "Which of these is a preposition?",
+      "options": ["Apple", "Quick", "Under", "Green"],
+      "answer": "Under"
+    },
+    {
+      "id": 2,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "Which sentence uses the correct verb form?",
+      "options": ["She go to work every day.", "She goes to work every day.", "She gone to work every day.", "She going to work every day."],
+      "answer": "She goes to work every day."
+    },
+    {
+      "id": 3,
+      "level": "A1",
+      "competency": "reading",
+      "question": "Read the sentence: 'My brother works in a bank.' What does he do?",
+      "options": ["He studies.", "He works in a hospital.", "He works in a bank.", "He travels a lot."],
+      "answer": "He works in a bank."
+    },
+    {
+      "id": 4,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "Which word is related to time?",
+      "options": ["Quickly", "Table", "Yesterday", "Window"],
+      "answer": "Yesterday"
+    },
+    {
+      "id": 5,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "Choose the correct negative form: 'He ___ like tea.'",
+      "options": ["don't", "doesn't", "isn't", "hasn't"],
+      "answer": "doesn't"
+    },
+
+    {
+      "id": 6,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Choose the correct past tense: 'She ___ a letter yesterday.'",
+      "options": ["write", "writes", "wrote", "written"],
+      "answer": "wrote"
+    },
+    {
+      "id": 7,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "Which word is similar in meaning to 'happy'?",
+      "options": ["Sad", "Glad", "Angry", "Tired"],
+      "answer": "Glad"
+    },
+    {
+      "id": 8,
+      "level": "A2",
+      "competency": "reading",
+      "question": "Read: 'John went to the market and bought apples.' What did John buy?",
+      "options": ["Oranges", "Apples", "Bananas", "Chairs"],
+      "answer": "Apples"
+    },
+    {
+      "id": 9,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Choose the correct option: 'We have lived here ___ 2010.'",
+      "options": ["for", "since", "at", "in"],
+      "answer": "since"
+    },
+    {
+      "id": 10,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "Which one is a means of transportation?",
+      "options": ["Car", "Tree", "Book", "House"],
+      "answer": "Car"
+    },
+
+    {
+      "id": 11,
+      "level": "B1",
+      "competency": "grammar",
+      "question": "Choose the correct conditional: 'If I were rich, I ___ travel the world.'",
+      "options": ["will", "would", "can", "could"],
+      "answer": "would"
+    },
+    {
+      "id": 12,
+      "level": "B1",
+      "competency": "vocabulary",
+      "question": "What does 'improve' mean?",
+      "options": ["Make better", "Make worse", "Ignore", "Complicate"],
+      "answer": "Make better"
+    },
+    {
+      "id": 13,
+      "level": "B1",
+      "competency": "reading",
+      "question": "Read: 'He missed the bus because he got up late.' Why did he miss the bus?",
+      "options": ["He got up early", "He got up late", "He ran fast", "He forgot his ticket"],
+      "answer": "He got up late"
+    },
+    {
+      "id": 14,
+      "level": "B1",
+      "competency": "grammar",
+      "question": "Which sentence is correct?",
+      "options": ["He doesn’t plays football.", "He doesn’t play football.", "He don’t play football.", "He not play football."],
+      "answer": "He doesn’t play football."
+    },
+    {
+      "id": 15,
+      "level": "B1",
+      "competency": "vocabulary",
+      "question": "Choose the phrasal verb: 'She ___ up smoking.'",
+      "options": ["took", "gave", "gave up", "put"],
+      "answer": "gave up"
+    },
+
+    {
+      "id": 16,
+      "level": "B2",
+      "competency": "grammar",
+      "question": "Choose the correct passive voice form:",
+      "options": ["The car was fixed by the mechanic.", "The mechanic fixed by the car.", "The car is fix by the mechanic.", "The car fix by mechanic."],
+      "answer": "The car was fixed by the mechanic."
+    },
+    {
+      "id": 17,
+      "level": "B2",
+      "competency": "vocabulary",
+      "question": "Which word means 'complex or difficult'?",
+      "options": ["Easy", "Complicated", "Basic", "Simple"],
+      "answer": "Complicated"
+    },
+    {
+      "id": 18,
+      "level": "B2",
+      "competency": "reading",
+      "question": "Interpret: 'Despite his fear, he spoke confidently.' What does this show?",
+      "options": ["He was quiet", "He was brave", "He was dishonest", "He stayed silent"],
+      "answer": "He was brave"
+    },
+    {
+      "id": 19,
+      "level": "B2",
+      "competency": "grammar",
+      "question": "Complete: 'I wish I ___ more time.'",
+      "options": ["have", "had", "has", "will have"],
+      "answer": "had"
+    },
+    {
+      "id": 20,
+      "level": "B2",
+      "competency": "vocabulary",
+      "question": "What does 'significant' mean?",
+      "options": ["Unimportant", "Important", "Ordinary", "Usual"],
+      "answer": "Important"
+    },
+
+    {
+      "id": 21,
+      "level": "C1",
+      "competency": "grammar",
+      "question": "Identify the correct formal structure:",
+      "options": ["It is I who called.", "It is me who called.", "It was me called.", "It me who called."],
+      "answer": "It is I who called."
+    },
+    {
+      "id": 22,
+      "level": "C1",
+      "competency": "vocabulary",
+      "question": "Choose the word that means 'difficult to understand':",
+      "options": ["Clear", "Obvious", "Obscure", "Simple"],
+      "answer": "Obscure"
+    },
+    {
+      "id": 23,
+      "level": "C1",
+      "competency": "reading",
+      "question": "Interpret: 'Her proposal, though well-written, lacked originality.' What is implied?",
+      "options": ["It was original", "It was copied", "It was not creative", "It was praised"],
+      "answer": "It was not creative"
+    },
+    {
+      "id": 24,
+      "level": "C1",
+      "competency": "grammar",
+      "question": "Which sentence uses inversion correctly?",
+      "options": ["Never I have seen this.", "Never have I seen this.", "Never seen I this.", "I never have seen this."],
+      "answer": "Never have I seen this."
+    },
+
+    {
+      "id": 25,
+      "level": "C2",
+      "competency": "vocabulary",
+      "question": "What does 'ephemeral' mean?",
+      "options": ["Eternal", "Short-lived", "Colorful", "Solid"],
+      "answer": "Short-lived"
+    },
+    {
+      "id": 26,
+      "level": "C2",
+      "competency": "reading",
+      "question": "Interpret: 'He spoke with such verbosity that few could follow.'",
+      "options": ["He was silent", "He was confusing", "He used too many words", "He whispered"],
+      "answer": "He used too many words"
+    },
+    {
+      "id": 27,
+      "level": "C2",
+      "competency": "grammar",
+      "question": "Choose the best inversion structure:",
+      "options": ["Rarely I have seen this.", "Rarely have I seen this.", "Rarely seen I this.", "Rarely I seen this."],
+      "answer": "Rarely have I seen this."
+    },
+    {
+      "id": 28,
+      "level": "C2",
+      "competency": "vocabulary",
+      "question": "Which sentence uses 'per se' correctly?",
+      "options": ["She is not mean per se, just strict.", "She per se is late.", "She is per se teacher.", "Per se she late is."],
+      "answer": "She is not mean per se, just strict."
+    },
+    {
+      "id": 29,
+      "level": "C2",
+      "competency": "grammar",
+      "question": "Choose the advanced construction:",
+      "options": ["Scarcely had he arrived when the meeting started.", "Scarcely he arrived...", "Scarcely has he arrived...", "Scarcely he has arrived..."],
+      "answer": "Scarcely had he arrived when the meeting started."
+    },
+    {
+      "id": 30,
+      "level": "C2",
+      "competency": "reading",
+      "question": "Interpret: 'Her criticism, though veiled, was clearly targeted.'",
+      "options": ["She complimented directly", "She criticized openly", "She gave indirect criticism", "She avoided criticism"],
+      "answer": "She gave indirect criticism"
+    }
+  ]
+}

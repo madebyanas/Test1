@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <!-- Background Circle -->
+  <circle cx="250" cy="200" r="150" fill="#f0f9ff" stroke="#4a90e2" stroke-width="5" />
+  
+  <!-- Trophy -->
+  <g transform="translate(175, 100) scale(0.8)">
+    <!-- Trophy Cup -->
+    <path d="M150,50 L150,120 C150,150 120,180 90,180 C60,180 30,150 30,120 L30,50 Z" fill="#ffd700" stroke="#e6b800" stroke-width="3" />
+    
+    <!-- Trophy Base -->
+    <rect x="60" y="180" width="60" height="10" fill="#ffd700" stroke="#e6b800" stroke-width="2" />
+    <rect x="75" y="190" width="30" height="20" fill="#ffd700" stroke="#e6b800" stroke-width="2" />
+    <rect x="65" y="210" width="50" height="5" fill="#ffd700" stroke="#e6b800" stroke-width="2" />
+    
+    <!-- Trophy Handles -->
+    <path d="M30,70 C0,70 0,100 30,100" fill="none" stroke="#ffd700" stroke-width="8" />
+    <path d="M150,70 C180,70 180,100 150,100" fill="none" stroke="#ffd700" stroke-width="8" />
+  </g>
+  
+  <!-- Stars -->
+  <g fill="#ffcc00">
+    <!-- Star 1 -->
+    <path d="M100,80 L105,95 L120,95 L110,105 L115,120 L100,110 L85,120 L90,105 L80,95 L95,95 Z" />
+    <!-- Star 2 -->
+    <path d="M400,80 L405,95 L420,95 L410,105 L415,120 L400,110 L385,120 L390,105 L380,95 L395,95 Z" />
+    <!-- Star 3 -->
+    <path d="M150,40 L155,55 L170,55 L160,65 L165,80 L150,70 L135,80 L140,65 L130,55 L145,55 Z" />
+    <!-- Star 4 -->
+    <path d="M350,40 L355,55 L370,55 L360,65 L365,80 L350,70 L335,80 L340,65 L330,55 L345,55 Z" />
+  </g>
+  
+  <!-- Confetti -->
+  <g>
+    <rect x="120" y="150" width="10" height="5" fill="#ff5252" transform="rotate(30, 125, 152.5)" />
+    <rect x="380" y="150" width="10" height="5" fill="#4caf50" transform="rotate(-20, 385, 152.5)" />
+    <rect x="200" y="80" width="10" height="5" fill="#2196f3" transform="rotate(45, 205, 82.5)" />
+    <rect x="300" y="80" width="10" height="5" fill="#ff9800" transform="rotate(-45, 305, 82.5)" />
+    <rect x="150" y="300" width="10" height="5" fill="#9c27b0" transform="rotate(15, 155, 302.5)" />
+    <rect x="350" y="300" width="10" height="5" fill="#ffeb3b" transform="rotate(-15, 355, 302.5)" />
+    <circle cx="180" cy="120" r="3" fill="#e91e63" />
+    <circle cx="320" cy="120" r="3" fill="#3f51b5" />
+    <circle cx="220" cy="320" r="3" fill="#009688" />
+    <circle cx="280" cy="320" r="3" fill="#ff5722" />
+  </g>
+  
+  <!-- Text Area -->
+  <text x="250" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#4a90e2">Félicitations !</text>
+</svg>

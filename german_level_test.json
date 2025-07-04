@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "Welches dieser Wörter ist eine Präposition?",
+      "options": ["Apfel", "Schnell", "Unter", "Grün"],
+      "answer": "Unter"
+    },
+    {
+      "id": 2,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "Welcher Satz verwendet die richtige Verbform?",
+      "options": ["Sie gehen jeden Tag zur Arbeit.", "Sie geht jeden Tag zur Arbeit.", "Sie gehst jeden Tag zur Arbeit.", "Sie gehe jeden Tag zur Arbeit."],
+      "answer": "Sie geht jeden Tag zur Arbeit."
+    },
+    {
+      "id": 3,
+      "level": "A1",
+      "competency": "reading",
+      "question": "Lesen Sie den Satz: 'Mein Bruder arbeitet in einer Bank.' Was macht er?",
+      "options": ["Er studiert.", "Er arbeitet in einem Krankenhaus.", "Er arbeitet in einer Bank.", "Er reist viel."],
+      "answer": "Er arbeitet in einer Bank."
+    },
+    {
+      "id": 4,
+      "level": "A1",
+      "competency": "vocabulary",
+      "question": "Welches Wort bezieht sich auf Zeit?",
+      "options": ["Schnell", "Tisch", "Gestern", "Fenster"],
+      "answer": "Gestern"
+    },
+    {
+      "id": 5,
+      "level": "A1",
+      "competency": "grammar",
+      "question": "Wählen Sie die richtige Negativform: 'Er ___ keinen Tee.'",
+      "options": ["mag", "mögt", "magst", "mögen"],
+      "answer": "mag"
+    },
+    {
+      "id": 6,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Wählen Sie das richtige Präteritum: 'Sie ___ gestern einen Brief.'",
+      "options": ["schreibt", "schrieb", "schreiben", "geschrieben"],
+      "answer": "schrieb"
+    },
+    {
+      "id": 7,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "Was ist ein Synonym für 'glücklich'?",
+      "options": ["Traurig", "Müde", "Froh", "Wütend"],
+      "answer": "Froh"
+    },
+    {
+      "id": 8,
+      "level": "A2",
+      "competency": "reading",
+      "question": "Lesen Sie den Text: 'Maria mag Äpfel, aber sie bevorzugt Orangen.' Was bevorzugt Maria?",
+      "options": ["Äpfel", "Orangen", "Beide gleichermaßen", "Weder noch"],
+      "answer": "Orangen"
+    },
+    {
+      "id": 9,
+      "level": "A2",
+      "competency": "grammar",
+      "question": "Ergänzen Sie: 'Wenn ich Geld hätte, ___ ich in den Urlaub fahren.'",
+      "options": ["werde", "würde", "bin", "war"],
+      "answer": "würde"
+    },
+    {
+      "id": 10,
+      "level": "A2",
+      "competency": "vocabulary",
+      "question": "Welches Wort gehört nicht zum Wortfeld 'Essen'?",
+      "options": ["Brot", "Käse", "Teller", "Karotte"],
+      "answer": "Teller"
+    }
+  ]
+}

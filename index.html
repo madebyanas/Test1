@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Niveau de Langue</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar top-navbar">
+            <div class="social-icons desktop-only">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="logo">
+                <img src="logo.svg" alt="Logo" id="logo-img">
+                <span class="desktop-only">English Test</span>
+            </div>
+            <div class="nav-right">
+                <button class="btn primary-btn start-btn" id="start-test">Commencez le test</button>
+                <div class="timer" id="quiz-timer">00:00</div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- La barre de navigation du quiz a été déplacée en bas du document -->
+
+    <main>
+        <!-- Écran de sélection de langue -->
+        <section id="language-selection" class="screen active">
+            <div class="container text-center">
+                <h1>Bienvenue au Test de Niveau de Langue</h1>
+                <p>Veuillez sélectionner votre langue préférée pour commencer le test</p>
+                <div class="language-options">
+                    <button class="language-btn" data-lang="en">
+                        <img src="en-flag.svg" alt="English">
+                        <span>English</span>
+                    </button>
+                    <button class="language-btn" data-lang="fr">
+                        <img src="fr-flag.svg" alt="Français">
+                        <span>Français</span>
+                    </button>
+                    <button class="language-btn" data-lang="es">
+                        <img src="fr-flag.svg" alt="Español">
+                        <span>Español</span>
+                    </button>
+                    <button class="language-btn" data-lang="de">
+                        <img src="fr-flag.svg" alt="Deutsch">
+                        <span>Deutsch</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Écran de quiz -->
+        <section id="quiz" class="screen">
+            <div class="container">
+                <div class="question-container">
+                    <h2 id="question-text">Question apparaîtra ici</h2>
+                    <div class="options-container" id="options">
+                        <!-- Les options seront générées dynamiquement -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Écran de formulaire -->
+        <section id="user-form" class="screen">
+            <div class="container">
+                <h1>Presque terminé !</h1>
+                <p>Veuillez remplir ce formulaire pour recevoir vos résultats</p>
+                
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Voir mes résultats</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Popup d'information école -->
+        <div id="school-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h2>Merci pour votre participation !</h2>
+                <div class="school-info">
+                    <img src="logo.svg" alt="Logo École" class="school-logo">
+                    <h3>École de Langues Internationale</h3>
+                    <p>Nous sommes spécialisés dans l'enseignement des langues avec des méthodes modernes et efficaces.</p>
+                    <div class="school-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Langues, 75000 Paris</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@ecolelangues.com</p>
+                    </div>
+                </div>
+                <div class="school-social">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="share-section">
+                    <h4>Partagez ce test avec vos amis</h4>
+                    <button id="share-button" class="btn primary-btn"><i class="fas fa-share-alt"></i> Partager</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Écran de résultats -->
+        <section id="results" class="screen">
+            <div class="container">
+                <h1>Vos Résultats</h1>
+                
+                <img src="congratulations.svg" alt="Félicitations" class="congratulations-image">
+                
+                <div class="result-card">
+                    <div class="level-badge" id="overall-level">B2</div>
+                    <h2>Niveau Global</h2>
+                    <p>Félicitations ! Voici votre niveau de langue basé sur vos réponses.</p>
+                </div>
+                
+                <div class="competency-results">
+                    <h2>Résultats par Compétence</h2>
+                    <div class="competency-grid">
+                        <div class="competency-item">
+                            <div class="competency-icon grammar-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Grammaire</h3>
+                            <div class="percentage-circle">
+                                <svg>
+                                    <circle cx="40" cy="40" r="35"></circle>
+                                    <circle cx="40" cy="40" r="35" id="grammar-circle"></circle>
+                                </svg>
+                                <div class="percentage" id="grammar-percentage">0%</div>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-icon vocabulary-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>Vocabulaire</h3>
+                            <div class="percentage-circle">
+                                <svg>
+                                    <circle cx="40" cy="40" r="35"></circle>
+                                    <circle cx="40" cy="40" r="35" id="vocabulary-circle"></circle>
+                                </svg>
+                                <div class="percentage" id="vocabulary-percentage">0%</div>
+                            </div>
+                        </div>
+                        <div class="competency-item">
+                            <div class="competency-icon reading-icon">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <h3>Compréhension</h3>
+                            <div class="percentage-circle">
+                                <svg>
+                                    <circle cx="40" cy="40" r="35"></circle>
+                                    <circle cx="40" cy="40" r="35" id="reading-circle"></circle>
+                                </svg>
+                                <div class="percentage" id="reading-percentage">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+  
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+    <!-- Barre de navigation du quiz (en bas) -->
+    <div id="quiz-navbar" class="quiz-navbar">
+        <div class="competency-badge" id="current-competency">Vocabulaire</div>
+        <div class="question-counter">Question <span id="current-question">1</span>/<span id="total-questions">30</span></div>
+    </div>
+    <!-- Indicateur de chargement -->
+    <div id="loading-indicator" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center;">
+        <div style="background-color: white; padding: 20px; border-radius: 5px; text-align: center;">
+            <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 30px; height: 30px; animation: spin 2s linear infinite; margin: 0 auto 10px;"></div>
+            <p>Envoi en cours...</p>
+        </div>
+    </div>
+    
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>
