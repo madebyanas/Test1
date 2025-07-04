@@ -483,7 +483,7 @@ async function sendDataToGoogleSheets(name, phone, scores) {
     };
 
     // 🟢 METS TON URL ICI ⬇️
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxGwqq37Gy01-dfQcTdLdQ_OCSvey6eq_uV4fOJDUeGhDDJbTdZDOm8jAYTrkNq-jrDTQ/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzUV9Z_fJkaH5h5nIS-sD1KoAz5_O_o2s-A_OwmEldLTKMA3U36x7fHhdNkvOXgnPgE6Q/exec';
 
     return new Promise((resolve) => {
         try {
