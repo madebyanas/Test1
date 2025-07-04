@@ -466,25 +466,11 @@ function updatePercentageCircle(competency, percentage) {
 }
 
 async function sendDataToGoogleSheets(name, phone, scores) {
-    // Afficher l'indicateur de chargement
     const loadingIndicator = document.getElementById('loading-indicator');
     if (loadingIndicator) loadingIndicator.style.display = 'flex';
-    
-    // Tester d'abord la connexion au script Google Apps Script
-    console.log('Test de la connexion au script Google Apps Script...');
-    const isConnected = await testGoogleAppsScriptConnection();
-    console.log('Résultat de l\'envoi:', isConnected);
-    
-    if (!isConnected) {
-        console.error('Impossible de se connecter au script Google Apps Script');
-        // Masquer l'indicateur de chargement
-        if (loadingIndicator) loadingIndicator.style.display = 'none';
-        // Afficher une notification d'erreur
-        showNotification('Erreur de connexion au serveur. Veuillez réessayer plus tard.', 'error');
-        return false;
-    }
-    
-    // Préparer les données à envoyer
+
+    console.log('Connexion au script : test de connexion désactivé');
+
     const data = {
         name: name,
         phone: phone,
@@ -495,22 +481,18 @@ async function sendDataToGoogleSheets(name, phone, scores) {
         selectedLanguage: selectedLanguage,
         timestamp: new Date().toISOString()
     };
-    
-    // URL de votre script Google Apps Script déployé en tant qu'application web
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxYUWkzzWEPyGarWDdF412KLH1bpV0QH8ZhSJLafxMdOxvrpoDenIgi3Gb14XL0xWy0GQ/exec';
-    
-    // Utiliser une approche alternative pour envoyer les données
-    // Créer un formulaire invisible et le soumettre
+
+    // 🟢 METS TON URL ICI ⬇️
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxPiSPIoWWrYytyVnkmSmliunawSHxJTV5lViAPmz4xkdYYloRcPBjLJG5I9Q4pQRG3qA/exec';
+
     return new Promise((resolve) => {
         try {
-            // Créer un formulaire temporaire
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = scriptURL;
             form.target = 'hidden-iframe';
             form.style.display = 'none';
-            
-            // Créer un iframe caché pour recevoir la réponse
+
             let iframe = document.getElementById('hidden-iframe');
             if (!iframe) {
                 iframe = document.createElement('iframe');
@@ -519,70 +501,47 @@ async function sendDataToGoogleSheets(name, phone, scores) {
                 iframe.style.display = 'none';
                 document.body.appendChild(iframe);
             }
-            
-            // Ajouter les données au formulaire
+
             const dataInput = document.createElement('input');
             dataInput.type = 'hidden';
             dataInput.name = 'data';
             dataInput.value = JSON.stringify(data);
             form.appendChild(dataInput);
-            
-            // Ajouter le formulaire au document et le soumettre
+
             document.body.appendChild(form);
-            
-            // Définir un timeout pour gérer les erreurs
+
             const timeoutId = setTimeout(() => {
-                console.error('L\'envoi des données a expiré après 15 secondes');
                 if (loadingIndicator) loadingIndicator.style.display = 'none';
                 showNotification('L\'envoi des données a pris trop de temps. Veuillez réessayer.', 'error');
                 resolve(false);
             }, 15000);
-            
-            // Gérer la réponse de l'iframe
-            iframe.onload = function() {
+
+            iframe.onload = function () {
                 clearTimeout(timeoutId);
-                // Nettoyer
-                if (form.parentNode) {
-                    form.parentNode.removeChild(form);
-                }
-                
-                // Masquer l'indicateur de chargement
+                if (form.parentNode) form.parentNode.removeChild(form);
                 if (loadingIndicator) loadingIndicator.style.display = 'none';
-                
-                console.log('Données envoyées avec succès');
                 showNotification('Vos résultats ont été enregistrés avec succès !', 'success');
                 resolve(true);
             };
-            
-            // Gérer les erreurs
-            iframe.onerror = function() {
+
+            iframe.onerror = function () {
                 clearTimeout(timeoutId);
-                // Nettoyer
-                if (form.parentNode) {
-                    form.parentNode.removeChild(form);
-                }
-                
-                // Masquer l'indicateur de chargement
+                if (form.parentNode) form.parentNode.removeChild(form);
                 if (loadingIndicator) loadingIndicator.style.display = 'none';
-                
-                console.error('Erreur lors de l\'envoi des données');
-                showNotification('Une erreur est survenue lors de l\'envoi des données. Veuillez réessayer.', 'error');
+                showNotification('Erreur lors de l\'envoi des données.', 'error');
                 resolve(false);
             };
-            
-            // Soumettre le formulaire
+
             form.submit();
             console.log('Formulaire soumis');
-            
         } catch (error) {
-            console.error('Erreur lors de l\'envoi des données:', error);
-            // Masquer l'indicateur de chargement
             if (loadingIndicator) loadingIndicator.style.display = 'none';
-            showNotification('Une erreur est survenue. Veuillez réessayer.', 'error');
+            showNotification('Une erreur est survenue.', 'error');
             resolve(false);
         }
     });
 }
+
 
 function updateUILanguage(lang) {
     // Cette fonction mettrait à jour tous les textes de l'interface en fonction de la langue sélectionnée
@@ -741,60 +700,4 @@ function showNotification(message, type = 'info') {
     setTimeout(() => {
         notification.classList.remove('show');
     }, 5000);
-}
-
-// Fonction pour tester la connexion au script Google Apps Script
-async function testGoogleAppsScriptConnection() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxPiSPIoWWrYytyVnkmSmliunawSHxJTV5lViAPmz4xkdYYloRcPBjLJG5I9Q4pQRG3qA/exec';
-    
-    // Utiliser une approche JSONP pour contourner les restrictions CORS
-    return new Promise((resolve) => {
-        // Créer un timeout pour gérer les erreurs
-        const timeoutId = setTimeout(() => {
-            // Nettoyer
-            if (window.googleScriptCallback) {
-                delete window.googleScriptCallback;
-            }
-            if (scriptElement && scriptElement.parentNode) {
-                scriptElement.parentNode.removeChild(scriptElement);
-            }
-            console.error('Le test de connexion a expiré après 5 secondes');
-            resolve(false);
-        }, 5000);
-        
-        // Définir une fonction de callback globale
-        window.googleScriptCallback = function(data) {
-            // Nettoyer
-            clearTimeout(timeoutId);
-            if (scriptElement && scriptElement.parentNode) {
-                scriptElement.parentNode.removeChild(scriptElement);
-            }
-            delete window.googleScriptCallback;
-            
-            console.log('Test de connexion au script Google Apps Script:', data);
-            resolve(data && data.success === true);
-        };
-        
-        // Créer et ajouter un élément script avec le callback
-        const timestamp = Date.now();
-        const callbackParam = 'googleScriptCallback';
-        const scriptElement = document.createElement('script');
-        scriptElement.src = `${scriptURL}?test=connection&t=${timestamp}&callback=${callbackParam}`;
-        console.log('Test de connexion à:', scriptElement.src);
-        
-        // Gérer les erreurs de chargement du script
-        scriptElement.onerror = function() {
-            clearTimeout(timeoutId);
-            if (scriptElement.parentNode) {
-                scriptElement.parentNode.removeChild(scriptElement);
-            }
-            if (window.googleScriptCallback) {
-                delete window.googleScriptCallback;
-            }
-            console.error('Erreur lors du chargement du script Google Apps Script');
-            resolve(false);
-        };
-        
-        document.body.appendChild(scriptElement);
-    });
 }
